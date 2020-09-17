@@ -53,7 +53,11 @@ LETTERS = {
 
 def gen_letters(text):
     bigletters = [LETTERS.get(i.lower(), LETTERS[" "]) for i in text]
-    return "\n".join(["  ".join([b[l] for b in bigletters]) for l in range(5)])
+    return "\n.                        ".join(["  ".join([b[l] for b in bigletters]) for l in range(5)])
+
+def gen_letters_smaller(text):
+    bigletters = [LETTERS.get(i.lower(), LETTERS[" "]) for i in text]
+    return "\n".join([" ".join([b[l] for b in bigletters]) for l in range(5)])
 
 def hours(countdown):
     return __hours_div_mod(countdown)[0]
@@ -78,11 +82,54 @@ def main():
     minutes_until = str(minutes(countdown))
     seconds_until = str(seconds(countdown))
 
-    print(gen_letters(hours_until + "-" + minutes_until + "-" + seconds_until))
+
+    countdown_message  = gen_letters(str(countdown.days) + "-" + hours_until + "-" + minutes_until + "-" + seconds_until)
+
+    print(countdown_message)
+    # print(gen_letters_smaller("days"))
+
+    print(".:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:..:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                 \n.                        " + countdown_message + "")
+    print(".                           days      hours        mins        secs                        .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                                                                           .")
+    print(".                                   |                         _...._                        .")
+    print(".                                \  _  /                    .::o:::::.                      .")
+    print(".                                 (\o/)                    .:::'''':o:.                     .")
+    print(".                             ---  / \  ---                :o:_    _:::                     .")
+    print(".                                  >*<                     `:}_>()<_{:'                     .")
+    print(".                                 >0<@<                 @    `'//\\\\'`    @                  .")
+    print(".                                >>>@<<*              @ #     //  \\\\     # @                .")
+    print(".                               >@>*<0<<<           __#_#____/'____'\____#_#__              .")
+    print(".                              >*>>@<<<@<<         [__________________________]             .")
+    print(".                             >@>>0<<<*<<@<         |=_- .-/\ /\ /\ /\--. =_-|              .")
+    print(".                            >*>>0<<@<<<@<<<        |-_= | \ \\\\ \\\\ \\\\ \ |-_=-|              .")
+    print(".                           >@>>*<<@<>*<<0<*<       |_=-=| / // // // / |_=-_|              .")
+    print(".             \*/          >0>>*<<@<>0><<*<@<<      |=_- |`-'`-'`-'`-'  |=_=-|              .")
+    print(".         ___/\\\\U//___    >*>>@><0<<*>>@><*<0<<     | =_-| o          o |_==_|              .")
+    print(".         |\\\\ | | \\\\|    >@>>0<*<<0>>@<<0<<<*<@<    |=_- | !     (    ! |=-_=|              .")
+    print(".         | \\\\| | _(UU)_ >((*))_>0><*<0><@<<<0<*<  _|-,-=| !    ).    ! |-_-=|_             .")
+    print(".         |\ \| || / //||.*.*.*.|>>@<<*<<@>><0<<@</=-((=_| ! __(:')__ ! |=_==_-\            .")
+    print(".         |\\\\_|_|&&_// ||*.*.*.*|_\\db//__     (\_/)-=))-|/^\=^=^^=^=/^\| _=-_-_\            .")
+    print(".         \"\"\"\"|\'.\'.\'|~~|.*.*.*|     ____|_   =(\'.\')=//   ,------------.                     .")
+    print(".             '.\'.\'.|   ^^^^^^|____|>>>>>>|  ( ~~~ )/   (((((((())))))))                    .")
+    print(".             ~~~~~~~~         \"\"\"\"\'------'  \'w---w\'     \'------------\'                     .")
+    print(".                                                                                           .")
+    print(".:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.)")
 
     # print(gen_letters(str(countdown)))
-#     print(
-# """.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:..:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:
+#     print(""".:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:..:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:
 # .                                                                                           .
 # .                                                                                           .
 # .                                                                                           .
