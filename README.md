@@ -1,6 +1,6 @@
 # Countdown to Christmas!
 
-This is just a fun little program I wanted to make since Christmas is only a few months away. I love Christmas time!
+I love Christmas time, and in the spirit of the holidays I wanted to create a simple countdown to that special day!
 
 Enjoy!
 
