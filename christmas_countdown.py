@@ -50,21 +50,21 @@ LETTERS = {
 }
 
 
-def gen_letters(text):
+def big_letters(text):
     bigletters = [LETTERS.get(i.lower(), LETTERS[" "]) for i in text]
     return "\n                  ".join(["   ".join([b[l] for b in bigletters]) for l in range(5)])
 
-def hours(countdown):
-    return __hours_div_mod(countdown)[0]
+def hours(different_between):
+    return __hours_div_mod(different_between)[0]
 
-def __hours_div_mod(countdown):
-    return divmod(countdown.seconds, 3600)
+def __hours_div_mod(different_between):
+    return divmod(different_between.seconds, 3600)
 
-def minutes(countdown):
-    return divmod( __hours_div_mod(countdown)[1], 60)[0]
+def minutes(different_between):
+    return divmod( __hours_div_mod(different_between)[1], 60)[0]
 
-def seconds(countdown):
-    return divmod( __hours_div_mod(countdown)[1], 60)[1]
+def seconds(different_between):
+    return divmod( __hours_div_mod(different_between)[1], 60)[1]
 
 def main():
 
@@ -77,55 +77,55 @@ def main():
     minutes_until = str(minutes(different_between))
     seconds_until = str(seconds(different_between))
 
-    countdown_message = gen_letters(str(different_between.days) + "-" + hours_until + "-" + minutes_until + "-" + seconds_until)
+    countdown_message = big_letters(str(different_between.days) + "-" + hours_until + "-" + minutes_until + "-" + seconds_until)
 
     print(".:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:..:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:")
     print("                                           *                                      *          ")
-    print("                        *                                      *                            ")
-    print("       \ /                                             *                                    ")
-    print("      - * -                                                                     *           ")
-    print("       / \                                  *                                               ")
-    print("                                                                        _v                 ")
-    print("                                                                   __* (__)                ")
-    print("                           ff     ff     ff     ff                {\/ (_(__).-.            ")
-    print("                    ff    <_\__, <_\__, <_\__, <_\__,      __,~~.(`>|-(___)/ ,_)           ")
-    print("      *           o<_\__,  (_ ff ~(_ ff ~(_ ff ~(_ ff~~~~~@ )\/_;-\"``     |                ")
-    print("                    (___)~~//<_\__, <_\__, <_\__, <_\__,    | \__________/|                ")
-    print("                    // >>     (___)~~(___)~~(___)~~(___)~~~~\\_/_______\_//                ")
-    print("                              // >>  // >>  // >>  // >> jgs `'---------'`                 ")
-    print("       *                                                                                    ")
-    print("              *                   \n         *        " + countdown_message)
-    print("                    days             hours            mins             secs                   ")
-    print("                                                                                            ")
-    print("    *             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -               ")
-    print("                   _   _     _   _ _    ___ _        _    _                 _               ")
-    print("                  | | | |_ _| |_(_) |  / __| |_  _ _(_)__| |_ _ __  __ _ __| |              ")
-    print("                  | |_| | ' \  _| | | | (__| ' \| '_| (_-<  _| '  \/ _` (_-<_|              ")
-    print("                   \___/|_||_\__|_|_|  \___|_||_|_| |_/__/\__|_|_|_\__,_/__(_)              ")
-    print("                                                                                           ")
-    print("                                                  *                                        ")
-    print("        *                          |                         _...._           *            ")
-    print("                                \  _  /                    .::o:::::.                      ")
-    print("                                 (\o/)                    .:::'''':o:.                     ")
-    print("                             ---  / \  ---                :o:_    _:::                     ")
-    print("                                  >*<                     `:}_>()<_{:'                     ")
+    print("                        *                                      *                             ")
+    print("       \ /                                             *                                    *")
+    print("      - * -                                                                     *            ")
+    print("       / \                                  *                                                ")
+    print("                                                                        _v                   ")
+    print("                                                                   __* (__)          *       ")
+    print("                           ff     ff     ff     ff                {\/ (_(__).-.              ")
+    print("                    ff    <_\__, <_\__, <_\__, <_\__,      __,~~.(`>|-(___)/ ,_)             ")
+    print("      *           o<_\__,  (_ ff ~(_ ff ~(_ ff ~(_ ff~~~~~@ )\/_;-\"``     |                 ")
+    print("                    (___)~~//<_\__, <_\__, <_\__, <_\__,    | \__________/|                  ")
+    print("                    // >>     (___)~~(___)~~(___)~~(___)~~~~\\_/_______\_//           *      ")
+    print("                              // >>  // >>  // >>  // >> jgs `'---------'`                   ")
+    print("       *                                                                            *        ")
+    print("              *                   \n         *        " + countdown_message + "            * ")
+    print("                    days             hours            mins             secs                  ")
+    print("                                                                                             ")
+    print("    *             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                ")
+    print("                   _   _     _   _ _    ___ _        _    _                 _         *      ")
+    print("                  | | | |_ _| |_(_) |  / __| |_  _ _(_)__| |_ _ __  __ _ __| |               ")
+    print("                  | |_| | ' \  _| | | | (__| ' \| '_| (_-<  _| '  \/ _` (_-<_|     *         ")
+    print("                   \___/|_||_\__|_|_|  \___|_||_|_| |_/__/\__|_|_|_\__,_/__(_)               ")
+    print("                                                                                             ")
+    print("                                                  *                                         *")
+    print("        *                          |                         _...._           *              ")
+    print("                                \  _  /                    .::o:::::.                        ")
+    print("                                 (\o/)                    .:::'''':o:.                       ")
+    print("                             ---  / \  ---                :o:_    _:::                 *     ")
+    print("                                  >*<                     `:}_>()<_{:'                       ")
     print("          *         *            >0<@<                 @    `'//\\\\'`    @                  ")
-    print("                                >>>@<<*              @ #     //  \\\\     # @                ")
-    print("                               >@>*<0<<<           __#_#____/'____'\____#_#__              ")
-    print("              *               >*>>@<<<@<<         [__________________________]             ")
-    print("                             >@>>0<<<*<<@<         |=_- .-/\ /\ /\ /\--. =_-|              ")
-    print("                            >*>>0<<@<<<@<<<        |-_= | \ \\\\ \\\\ \\\\ \ |-_=-|              ")
-    print("                           >@>>*<<@<>*<<0<*<       |_=-=| / // // // / |_=-_|              ")
-    print("             \*/          >0>>*<<@<>0><<*<@<<      |=_- |`-'`-'`-'`-'  |=_=-|              ")
+    print("                                >>>@<<*              @ #     //  \\\\     # @        *       ")
+    print("                               >@>*<0<<<           __#_#____/'____'\____#_#__                ")
+    print("              *               >*>>@<<<@<<         [__________________________]               ")
+    print("                             >@>>0<<<*<<@<         |=_- .-/\ /\ /\ /\--. =_-|                ")
+    print("                            >*>>0<<@<<<@<<<        |-_= | \ \\\\ \\\\ \\\\ \ |-_=-|          ")
+    print("                           >@>>*<<@<>*<<0<*<       |_=-=| / // // // / |_=-_|                ")
+    print("             \*/          >0>>*<<@<>0><<*<@<<      |=_- |`-'`-'`-'`-'  |=_=-|         *      ")
     print("         ___/\\\\U//___    >*>>@><0<<*>>@><*<0<<     | =_-| o          o |_==_|              ")
-    print("         |\\\\ | | \\\\|    >@>>0<*<<0>>@<<0<<<*<@<    |=_- | !     (    ! |=-_=|              ")
-    print("         | \\\\| | _(UU)_ >((*))_>0><*<0><@<<<0<*<  _|-,-=| !    ).    ! |-_-=|_             ")
-    print("         |\ \| || / //||.*.*.*.|>>@<<*<<@>><0<<@</=-((=_| ! __(:')__ ! |=_==_-\            ")
-    print("         |\\\\_|_|&&_// ||*.*.*.*|_\\db//__     (\_/)-=))-|/^\=^=^^=^=/^\| _=-_-_\            ")
-    print("         \"\"\"\"|\'.\'.\'|~~|.*.*.*|     ____|_   =(\'.\')=//   ,------------.                     ")
-    print("             '.\'.\'.|   ^^^^^^|____|>>>>>>|  ( ~~~ )/   (((((((())))))))                    ")
-    print("             ~~~~~~~~         \"\"\"\"\'------'  \'w---w\'     \'------------\'                     ")
-    print("                                                                                           ")
+    print("         |\\\\ | | \\\\|    >@>>0<*<<0>>@<<0<<<*<@<    |=_- | !     (    ! |=-_=|          * ")
+    print("   *     | \\\\| | _(UU)_ >((*))_>0><*<0><@<<<0<*<  _|-,-=| !    ).    ! |-_-=|_             ")
+    print("         |\ \| || / //||.*.*.*.|>>@<<*<<@>><0<<@</=-((=_| ! __(:')__ ! |=_==_-\              ")
+    print("         |\\\\_|_|&&_// ||*.*.*.*|_\\db//__     (\_/)-=))-|/^\=^=^^=^=/^\| _=-_-_\           ")
+    print("         \"\"\"\"|\'.\'.\'|~~|.*.*.*|     ____|_   =(\'.\')=//   ,------------.              ")
+    print("             '.\'.\'.|   ^^^^^^|____|>>>>>>|  ( ~~~ )/   (((((((())))))))               *    ")
+    print("             ~~~~~~~~         \"\"\"\"\'------'  \'w---w\'     \'------------\'              ")
+    print("                                                                                             ")
     print(".:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.)")
 
 if __name__ == '__main__':
